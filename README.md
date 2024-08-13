@@ -10,8 +10,7 @@ The research team at my organisation needs to revise the file permissions for sp
 
 The following code illustrates how I employed Linux commands to check the current permissions for a particular directory within the file system.
 
-
-
+<img width="626" alt="Screenshot 2024-08-13 at 14 17 14" src="https://github.com/user-attachments/assets/0e5809e3-aa80-46e0-b328-cba86586ef91">
 
 In the first line of the screenshot, you can see the command I executed, while the subsequent lines show the results. The command lists all items in the projects directory, including hidden files, by using the **'ls -la'** command. The output reveals one directory named drafts, a hidden file called **'.project_x.txt'**, and five additional project files. The 10-character string in the first column of the output displays the permissions assigned to each file or directory.
 
@@ -31,6 +30,7 @@ The organisation decided that write access should be revoked for all users outsi
 
 The following code illustrates how I accomplished this using Linux commands:
 
+<img width="631" alt="Screenshot 2024-08-13 at 14 19 23" src="https://github.com/user-attachments/assets/29def4e1-7893-4582-9f69-58400c7d5a1e">
 
 
 The first two lines of the screenshot show the commands I executed, while the remaining lines display the output from the second command. The **'chmod'** command is used to alter file and directory permissions. The first argument specifies the permissions to be modified, and the second argument indicates the file or directory in question. In this case, I adjusted the permissions to remove write access for **'other'** from **'project_k.txt'**. After making these changes, I ran **'ls -la'** to verify the updated permissions.
@@ -41,12 +41,17 @@ The research team at my organisation recently archived **'project_x.txt'** and d
 
 The following code shows how I adjusted the permissions using Linux commands:
 
+<img width="627" alt="Screenshot 2024-08-13 at 14 21 08" src="https://github.com/user-attachments/assets/ae3dce15-02f3-4b89-bd85-58eb0a85b5c8">
+
+
 The first two lines of the screenshot present the commands I executed, while the remaining lines display the output from the second command. Since **'.project_x.txt'** is a hidden file (denoted by the initial period), I modified its permissions as follows: I removed write access from both the user and group, and granted read access to the group. Specifically, I used **'u-w'** to revoke write permissions for the user, **'g-w'** to revoke write permissions for the group, and **'g+r'** to add read permissions for the group.
 
 ## Change directory permissions
 My organisation requires that only the **'researcher2'** user has access to the drafts directory and its contents. This means no one else should have execute permissions.
 
 The following code illustrates how I modified the permissions using Linux commands:
+
+<img width="623" alt="Screenshot 2024-08-13 at 14 22 03" src="https://github.com/user-attachments/assets/19402471-22a2-45e7-a3cf-00d1959a6185">
 
 The output shows the permission listing for various files and directories. Line 1 represents the current directory (projects), while line 2 shows the parent directory (home). Line 3 displays a regular file named **'.project_x.txt'**, and line 4 lists the drafts directory with its updated permissions. You can see that only **'researcher2'** has execute permissions. Previously, the group also had execute permissions, so I used the **'chmod'** command to remove them. Since **'researcher2'** already had execute permissions, no further adjustments were needed.
 
